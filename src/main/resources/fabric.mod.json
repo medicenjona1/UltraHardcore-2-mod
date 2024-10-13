@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "eseemepetekniko",
+	"version": "${version}",
+	"name": "eseemepetekniko",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/eseemepetekniko/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.medicenjona.Eseemepetekniko"
+		],
+		"client": [
+			"com.medicenjona.EseemepeteknikoClient"
+		],
+		"fabric-datagen": [
+			"com.medicenjona.EseemepeteknikoDataGenerator"
+		]
+	},
+	"mixins": [
+		"eseemepetekniko.mixins.json",
+		{
+			"config": "eseemepetekniko.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
